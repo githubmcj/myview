@@ -1,4 +1,4 @@
-package com.hjm.bottomtabbarold.util;
+package com.wya.views.bottomtabbar.util;
 
 import android.content.Context;
 import android.content.res.ColorStateList;

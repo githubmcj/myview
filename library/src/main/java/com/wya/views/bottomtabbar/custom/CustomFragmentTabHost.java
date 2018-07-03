@@ -1,4 +1,4 @@
-package com.hjm.bottomtabbarold.custom;
+package com.wya.views.bottomtabbar.custom;
 
 /**
  * Created by hjm on 2017/2/19/019.

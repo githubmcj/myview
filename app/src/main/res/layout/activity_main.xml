@@ -6,10 +6,10 @@
     tools:context="com.custom.views.myviews.MainActivity">
 
 
-    <com.hjm.bottomtabbarold.BottomTabBar
+    <com.wya.views.bottomtabbar.BottomTabBar
         android:id="@+id/bottom_tab_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </com.hjm.bottomtabbarold.BottomTabBar>
+    </com.wya.views.bottomtabbar.BottomTabBar>
 
 </android.support.constraint.ConstraintLayout>

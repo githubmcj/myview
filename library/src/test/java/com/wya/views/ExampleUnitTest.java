@@ -1,4 +1,4 @@
-package com.hjm.bottomtabbarold;
+package com.wya.views;
 
 import org.junit.Test;
 

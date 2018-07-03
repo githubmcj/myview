@@ -1,4 +1,4 @@
-package com.hjm.bottomtabbarold;
+package com.wya.views.bottomtabbar;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -20,8 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.hjm.bottomtabbarold.custom.CustomFragmentTabHost;
-import com.hjm.bottomtabbarold.util.TintUtil;
+import com.wya.views.R;
+import com.wya.views.bottomtabbar.custom.CustomFragmentTabHost;
+import com.wya.views.bottomtabbar.util.TintUtil;
 
 import java.util.ArrayList;
 import java.util.List;
