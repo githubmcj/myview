@@ -4,15 +4,12 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tv_show"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="2" />
+        android:text="点击显示各种View"
+        android:gravity="center"/>
 
-    <Button
-        android:id="@+id/btn_loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="显示加载动画"
-        android:padding="12dp"/>
+
 
 </FrameLayout>

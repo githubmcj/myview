@@ -3,7 +3,6 @@ package com.wya.views.dialog;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,6 +13,12 @@ import android.widget.TextView;
 
 import com.wya.views.R;
 
+ /**
+  * 创建日期：2018/8/8 16:24
+  * 作者： Mao Chunjiang
+  * 文件名称：LoadingDialog
+  * 类说明：加载动画
+  */
 
 public class LoadingDialog extends Dialog {
 	private View view;
@@ -21,7 +26,7 @@ public class LoadingDialog extends Dialog {
 	private ColorDrawable colorDrawable;
 
 	@SuppressLint("ResourceType")
-	public LoadingDialog(Context activity) {
+	public LoadingDialog(Context activity, boolean enabled) {
 		super(activity);
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
     	view = View.inflate(activity, R.layout.dialog_loading, null);
@@ -32,8 +37,8 @@ public class LoadingDialog extends Dialog {
 		animationDrawable = (AnimationDrawable) img_load.getBackground();
 
     	//取消dialog空白处点击消失事件
-		this.setCanceledOnTouchOutside(false);
-		setCancelable(false);
+		this.setCanceledOnTouchOutside(enabled);
+		setCancelable(enabled);
 	}
 
 	@Override
