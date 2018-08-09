@@ -8,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.wya.views.dialog.LoadingDialog;
-
 public class Fragment1 extends Fragment {
 
     private View view;

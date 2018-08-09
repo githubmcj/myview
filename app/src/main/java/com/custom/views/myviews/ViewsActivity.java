@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.wya.views.dialog.CustomDialog;
 import com.wya.views.dialog.LoadingDialog;
