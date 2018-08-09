@@ -35,8 +35,48 @@ myview
 
                     }
                 });
-
-
+##### 调用动画加载
+	loadingDialog = new LoadingDialog(ViewsActivity.this, true);
+                loadingDialog.show();
+##### 调用圆行图片
+	img = (CornerImageView) findViewById(R.id.img);
+        //图片圆形加载
+        Glide.with(this).load("")
+                .error(this.getResources().getDrawable(R.mipmap.white))
+                .placeholder(this.getResources().getDrawable(R.mipmap.white))
+                .transform(new CenterCrop(this), new GlideCircleTransform(this))
+                .into(img);
+##### 调用圆角矩形图片		
+	//图片圆角加载
+        img2 = (ImageView) findViewById(R.id.img2);
+        Glide.with(this).load("https://www.baidu.com/img/bd_logo1.png")
+                .error(this.getResources().getDrawable(R.mipmap.white))
+                .placeholder(this.getResources().getDrawable(R.mipmap.white))
+                .transform(new CenterCrop(this), new GlideRoundTransform(this))
+                .into(img2);
+##### 调用普通提示框
+    private  CustomDialog commondialog;
+    private void showDialog() {
+        commondialog = new CustomDialog(this);
+        commondialog.show();
+        commondialog.setMessage("毛春江帅吗？");
+        commondialog.setTitle("提示");
+        commondialog.setCancleText("不帅");
+        commondialog.setConfirmText("帅");
+        commondialog.setConfirmColor(R.drawable.btn_blue_click_color);
+        commondialog.setCancleColor(R.drawable.btn_c333333_click_color);
+        commondialog.setYesOnclickListener(new CustomDialog.onYesOnclickListener() {
+            @Override
+            public void onYesClick() {
+                commondialog.dismiss();
+            }
+        });
+        commondialog.setNoOnclickListener(new CustomDialog.onNoOnclickListener() {
+            @Override
+            public void onNoClick() {
+            }
+        });
+    }
 ### 4、[历史版本]：
 ##### 2018.6.28
     *完成自定义导航栏功能，其中包括Fragment切换功能，版本v1.0.0
@@ -49,6 +89,18 @@ myview
 	}
     dependencies {
 	        implementation 'com.github.githubmcj:myview:v1.0.0'
+	}
+##### 2018.8.9
+    *添加圆角控件、添加普通提示框、删除多余依赖库、添加glide库
+    *引用方式：   
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+    dependencies {
+	        implementation 'com.github.githubmcj:myview:v1.0.1'
 	}
 
 
