@@ -40,7 +40,7 @@ public class ViewsActivity extends AppCompatActivity {
         btn_loading.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadingDialog = new LoadingDialog(ViewsActivity.this, true);
+                loadingDialog = new LoadingDialog(ViewsActivity.this, false, true);
                 loadingDialog.show();
             }
         });

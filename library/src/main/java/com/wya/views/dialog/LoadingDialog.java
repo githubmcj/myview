@@ -26,7 +26,7 @@ public class LoadingDialog extends Dialog {
 	private ColorDrawable colorDrawable;
 
 	@SuppressLint("ResourceType")
-	public LoadingDialog(Context activity, boolean enabled) {
+	public LoadingDialog(Context activity, boolean canceledOnTouch, boolean cancelable) {
 		super(activity);
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
     	view = View.inflate(activity, R.layout.dialog_loading, null);
@@ -37,8 +37,8 @@ public class LoadingDialog extends Dialog {
 		animationDrawable = (AnimationDrawable) img_load.getBackground();
 
     	//取消dialog空白处点击消失事件
-		this.setCanceledOnTouchOutside(enabled);
-		setCancelable(enabled);
+		this.setCanceledOnTouchOutside(canceledOnTouch);
+		setCancelable(cancelable);
 	}
 
 	@Override
