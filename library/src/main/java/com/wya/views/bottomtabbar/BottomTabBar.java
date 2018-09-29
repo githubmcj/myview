@@ -273,6 +273,22 @@ public class BottomTabBar extends LinearLayout {
      * <p>
      * 此方法必须在addTabItem()之前调用
      *
+     * @param show 是否显示
+     * @return
+     */
+    public BottomTabBar setVisibility(boolean show) {
+        if(show){
+            mTabHost.setVisibility(View.VISIBLE);
+        } else {
+            mTabHost.setVisibility(View.GONE);
+        }
+        return this;
+    }
+    /**
+     * 设置图片的尺寸
+     * <p>
+     * 此方法必须在addTabItem()之前调用
+     *
      * @param width  宽度 px
      * @param height 高度 px
      * @return
