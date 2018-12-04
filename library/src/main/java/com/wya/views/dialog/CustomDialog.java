@@ -70,12 +70,12 @@ public class CustomDialog extends Dialog {
 
     @SuppressLint("ResourceType")
     public void setConfirmColor(int text_color) {
-        confirm.setTextColor(context.getResources().getColorStateList(R.drawable.btn_c333333_click_color));
+        confirm.setTextColor(context.getResources().getColorStateList(text_color));
     }
 
     @SuppressLint("ResourceType")
     public void setCancleColor(int text_color) {
-        cancel.setTextColor(context.getResources().getColorStateList(R.drawable.btn_blue_click_color));
+        cancel.setTextColor(context.getResources().getColorStateList(text_color));
     }
 
     /**
